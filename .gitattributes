@@ -1,2 +1,15 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+* text = auto
+
+*.js eol=lf
+*.jsx eol=lf
+*.html eol=lf
+*.css eol=lf
+
+*.cjs eol=lf
+*.json eol=lf
+*.md eol=lf
+*.gitignore eol=lf
+
+*.png binary
+*.jpg binary
+*.gif binary
