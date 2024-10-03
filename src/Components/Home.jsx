@@ -3,21 +3,15 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import Features from './Features'
 import Call_to_action from './Call_to_action'
+import Membership from './Membership'
 import Footer from './Footer'
 
-// import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
-
-
 const Home = () => {
-    
-
     return (
         <>
-            <Navbar/>
-            <Hero/>
-            <Features/>
-            <Call_to_action/>
-            <Footer/>
+            <Hero />
+            <div id="features"><Features /></div>
+            {/* <Call_to_action /> */}
         </>
     )
 }

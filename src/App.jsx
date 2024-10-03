@@ -1,28 +1,30 @@
-import { useState } from 'react'
-import Home from './Components/Home'
-import './App.css'
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
-
+import Home from './Components/Home';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import OurStory from './Components/OurStory';
+import Features from './Components/Features';
+import Membership from './Components/Membership';
+import Signin from './Components/Signin';
+import GetStarted from './Components/GetStarted';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: (
-        <>
-          <Home/>
-          {/* <Outlet /> */}
-        </>
-      )
-    }
-  ]);
-  
-
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  )
+    <Router>
+      <Navbar />
+      
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/ourstory' element={<OurStory />} />
+        <Route path='/membership' element={<Membership />} />
+        <Route path='/signin' element={<Signin />} />
+        <Route path='/getstarted' element={<GetStarted />} />
+      </Routes>
+      
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,67 +1,102 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { FaHome, FaInfoCircle, FaSignInAlt, FaRocket, FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleFeaturesClick = (e) => {
+    e.preventDefault();
+    navigate('/');  // Navigate to Home page
+    setTimeout(() => {
+      const section = document.querySelector('#features');  // Scroll to the "Features" section
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);  // Delay to ensure Home page loads before scroll
+  };
+
+  const handleClick = () => {
+    toggleMenu();
+    handleFeaturesClick();
+  };
+
   return (
     <>
-      <nav className='bg-[#0D1117]'>
-        <div className='container mx-auto flex justify-between items-center p-2'>
-          <div className='Logo text-white font-bold text-xl'>NewsTeller</div>
+      <nav className="bg-gradient-to-r from-blue-900  via-gray-800 to-black">
+        <div className="container mx-auto flex justify-between items-center p-4">
+          <NavLink to="/">
+            <div className="text-white font-bold text-2xl cursor-pointer">NewsTeller</div>
+          </NavLink>
 
-          <div className='block md:hidden'>
-            <button onClick={toggleMenu} className='text-white focus:outline-none'>
-              <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16M4 18h16'></path>
-              </svg>
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="text-white focus:outline-none">
+              {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
             </button>
           </div>
 
-          {/* Links - Hidden on Mobile, Visible on larger screens */}
-          <ul className='hidden md:flex gap-8 items-center text-white'>
-            <NavLink className='cursor-pointer hover:font-semibold' to='/'><li>Our Story</li></NavLink>
-            <NavLink className='cursor-pointer hover:font-semibold' to='/features'><li>Features</li></NavLink>
-            <NavLink className='cursor-pointer hover:font-semibold' to='/membership'><li>Membership</li></NavLink>
-            <NavLink className='cursor-pointer hover:font-semibold' to='/signin'><li>Signin</li></NavLink>
-            <NavLink className='cursor-pointer hover:font-semibold' to='/get-started'>
+          {/* Desktop Links */}
+          <ul className="hidden md:flex gap-8 items-center text-white">
+            <NavLink to="/" className="hover:text-purple-400 transition">
+              <FaHome className="inline mr-2" /> Home
+            </NavLink>
+            <NavLink to="/ourstory" className="hover:text-purple-400 transition">
+              <FaInfoCircle className="inline mr-2" /> Our Story
+            </NavLink>
+            <NavLink href="/#" className="hover:text-purple-400 transition" onClick={handleFeaturesClick}>
+              <FaRocket className="inline mr-2" /> Features
+            </NavLink>
+
+            <NavLink to="/membership" className="hover:text-purple-400 transition">
+              <FaUser className="inline mr-2" /> Membership
+            </NavLink>
+            <NavLink to="/signin" className="hover:text-purple-400 transition">
+              <FaSignInAlt className="inline mr-2" /> Signin
+            </NavLink>
+            <NavLink className='cursor-pointer ' to='/getstarted'>
+              <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-600 '>Get Started</button>
+            </NavLink>
+          </ul>
+        </div>
+
+        {/* Mobile Sidebar */}
+        <motion.div
+          className={`md:hidden fixed inset-0 bg-black bg-opacity-90 z-50 p-8 ${isOpen ? 'block' : 'hidden'}`}
+          initial={{ x: '-100%' }}
+          animate={{ x: isOpen ? 0 : '-100%' }}
+          transition={{ duration: 0.5 }}
+        >
+          <button className="absolute top-5 right-5 text-white" onClick={toggleMenu}>
+            <FaTimes size={30} />
+          </button>
+
+          <ul className="flex flex-col gap-6 mt-10 text-white">
+            <NavLink to="/" onClick={toggleMenu}>
+              <FaHome className="inline mr-2" /> Home
+            </NavLink>
+            <NavLink to="/ourstory" onClick={toggleMenu}>
+              <FaInfoCircle className="inline mr-2" /> Our Story
+            </NavLink>
+            <NavLink href="/#" onClick={handleClick} >
+              <FaRocket className="inline mr-2" /> Features
+            </NavLink>
+            <NavLink to="/membership" onClick={toggleMenu} >
+              <FaUser className="inline mr-2" /> Membership
+            </NavLink>
+            <NavLink to="/signin" onClick={toggleMenu}>
+              <FaSignInAlt className="inline mr-2" /> Signin
+            </NavLink>
+            <NavLink className='inline cursor-pointer ' to='/getstarted' onClick={toggleMenu}>
               <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-700'>Get Started</button>
             </NavLink>
           </ul>
-
-          {/* Side Drawer for Mobile */}
-          <div className={`fixed top-0 right-0 w-64 h-full bg-[#0D1117] z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
-            <div className='flex justify-between items-center p-4'>
-              {/* Logo stays in place */}
-              <div className='text-white font-bold text-xl'>NewsTeller</div>
-
-              {/* Close Icon */}
-              <button onClick={toggleMenu} className='text-white focus:outline-none'>
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
-                </svg>
-              </button>
-            </div>
-
-            {/* Links inside side drawer */}
-            <ul className='flex flex-col gap-6 p-4 text-white'>
-              <NavLink className='cursor-pointer hover:font-semibold' to='/'><li>Our Story</li></NavLink>
-              <NavLink className='cursor-pointer hover:font-semibold' to='/features'><li>Features</li></NavLink>
-              <NavLink className='cursor-pointer hover:font-semibold' to='/membership'><li>Membership</li></NavLink>
-              <NavLink className='cursor-pointer hover:font-semibold' to='/signin'><li>Signin</li></NavLink>
-              <NavLink className='cursor-pointer hover:font-semibold' to='/get-started'>
-                <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-700'>Get Started</button>
-              </NavLink>
-            </ul>
-          </div>
-
-          
-        </div>
-        <div className='border-b border-white'></div>
+        </motion.div>
       </nav>
     </>
   );

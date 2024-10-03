@@ -1,15 +1,34 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="p-6 bg-[#0D1117] text-white h-[540px] flex items-center">
-      <div className="max-w-lg text-left mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">
+    <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white h-[540px] flex items-center">
+      <div className="max-w-lg mx-auto text-center">
+        <motion.h1
+          className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           Elevate Your Knowledge: Curated Insights, Anytime, Anywhere
-        </h1>
-        <p className="text-lg md:text-xl mb-6">
+        </motion.h1>
+        <motion.p
+          className="text-xl text-gray-300 mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
           Stay ahead with our daily selection of top articles and engaging audio insights from AI personas tailored for busy professionals.
-        </p>
+        </motion.p>
+        <motion.button
+          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Get Started
+        </motion.button>
       </div>
     </section>
   );
