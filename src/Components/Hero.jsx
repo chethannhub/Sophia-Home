@@ -4,12 +4,13 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white h-[540px] flex items-center">
-      <div className="max-w-lg mx-auto text-center">
+      <div className="max-w-2xl mx-auto text-center p-2">
         <motion.h1
-          className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+          className="text-4xl font-bold  mb-2 p-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          style={{ fontSize: 'clamp(2rem, 3.2vw, 3.8rem)' }}
         >
           Elevate Your Knowledge: Curated Insights, Anytime, Anywhere
         </motion.h1>
@@ -18,6 +19,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
+          style={{ fontSize: 'clamp(1.2rem, 2vw, 1.25rem)' }}
         >
           Stay ahead with our daily selection of top articles and engaging audio insights from AI personas tailored for busy professionals.
         </motion.p>

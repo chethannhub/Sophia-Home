@@ -35,14 +35,14 @@ const Navbar = () => {
             <div className="text-white font-bold text-2xl cursor-pointer">NewsTeller</div>
           </NavLink>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
               {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
             </button>
           </div>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex gap-8 items-center text-white">
+          <ul className="hidden lg:flex gap-8 items-center text-white">
             <NavLink to="/" className="hover:text-purple-400 transition">
               <FaHome className="inline mr-2" /> Home
             </NavLink>
@@ -53,12 +53,12 @@ const Navbar = () => {
               <FaRocket className="inline mr-2" /> Features
             </NavLink>
 
-            <NavLink to="/membership" className="hover:text-purple-400 transition">
+            {/* <NavLink to="/membership" className="hover:text-purple-400 transition">
               <FaUser className="inline mr-2" /> Membership
-            </NavLink>
-            <NavLink to="/signin" className="hover:text-purple-400 transition">
+            </NavLink> */}
+            {/* <NavLink to="/signin" className="hover:text-purple-400 transition">
               <FaSignInAlt className="inline mr-2" /> Signin
-            </NavLink>
+            </NavLink> */}
             <NavLink className='cursor-pointer ' to='/getstarted'>
               <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-600 '>Get Started</button>
             </NavLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
 
         {/* Mobile Sidebar */}
         <motion.div
-          className={`md:hidden fixed inset-0 bg-black bg-opacity-90 z-50 p-8 ${isOpen ? 'block' : 'hidden'}`}
+          className={`lg:hidden fixed inset-0 bg-black bg-opacity-90 z-50 p-8 ${isOpen ? 'block' : 'hidden'}`}
           initial={{ x: '-100%' }}
           animate={{ x: isOpen ? 0 : '-100%' }}
           transition={{ duration: 0.5 }}
@@ -86,12 +86,12 @@ const Navbar = () => {
             <NavLink href="/#" onClick={handleClick} >
               <FaRocket className="inline mr-2" /> Features
             </NavLink>
-            <NavLink to="/membership" onClick={toggleMenu} >
+            {/* <NavLink to="/membership" onClick={toggleMenu} >
               <FaUser className="inline mr-2" /> Membership
-            </NavLink>
-            <NavLink to="/signin" onClick={toggleMenu}>
+            </NavLink> */}
+            {/* <NavLink to="/signin" onClick={toggleMenu}>
               <FaSignInAlt className="inline mr-2" /> Signin
-            </NavLink>
+            </NavLink> */}
             <NavLink className='inline cursor-pointer ' to='/getstarted' onClick={toggleMenu}>
               <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-700'>Get Started</button>
             </NavLink>

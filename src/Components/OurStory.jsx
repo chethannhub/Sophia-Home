@@ -9,18 +9,29 @@ const OurStory = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.h1
+            className="text-5xl font-bold p-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            style={{ fontSize: 'clamp(2rem, 3.2vw, 3.8rem)' }}
+          >
+            Our Story
+          </motion.h1>
+          <motion.h1
             className="text-5xl font-bold mb-4 p-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            style={{ fontSize: 'clamp(2rem, 3.2vw, 3.8rem)' }}
           >
-            Our Story: Empowering Learning & Growth
+            Empowering Learning & Growth
           </motion.h1>
           <motion.p
             className="text-xl text-gray-300 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
+            style={{ fontSize: 'clamp(1.2rem, 2vw, 1.25rem)' }}
           >
             We are on a mission to simplify learning for professionals, with
             AI-driven, personalized insights that fit seamlessly into your life.
@@ -38,9 +49,9 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="https://via.placeholder.com/500x300"
+                src="src\assets\Beginning.png"
                 alt="Our Journey"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
             </div>
             <div className="flex-1">
@@ -66,9 +77,9 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="https://via.placeholder.com/500x300"
+                src="src\assets\Growth.png"
                 alt="Our Growth"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
             </div>
             <div className="flex-1">
@@ -93,9 +104,9 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="https://via.placeholder.com/500x300"
+                src="src\assets\Future.png"
                 alt="Our Future"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
             </div>
             <div className="flex-1">
