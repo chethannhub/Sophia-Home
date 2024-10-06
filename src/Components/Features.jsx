@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHeadphones, FaUserFriends, FaMusic, FaNewspaper, FaFileAlt, FaRobot } from 'react-icons/fa';
-import Article from '../assets/Article1.png';
+import Article from '../assets/Article.png';
 import Audio from '../assets/Audio.png';
 import Podcast from '../assets/Podcast.png';
-import Music from '../assets/Music1.png';
+import Music from '../assets/Music.png';
 import SummaryImage from '../assets/Summary.png'; 
 import ChatAIImage from '../assets/ChatAI.png'; 
 

@@ -1,1 +1,1 @@
-# NewsTeller
+# Sophia - Home

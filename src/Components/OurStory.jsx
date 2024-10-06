@@ -1,6 +1,6 @@
 import React from "react";
-import { FaRocket, FaUsers, FaLightbulb } from "react-icons/fa"; // Icons
-import { motion } from "framer-motion"; // For animations
+import { FaRocket, FaUsers, FaLightbulb } from "react-icons/fa"; 
+import { motion } from "framer-motion"; 
 
 const OurStory = () => {
   return (
@@ -49,7 +49,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Beginning1.png"
+                src="src\assets\Beginning.png"
                 alt="Our Journey"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -77,7 +77,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Growth1.png"
+                src="src\assets\Growth.png"
                 alt="Our Growth"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -104,7 +104,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Future1.png"
+                src="src\assets\Future.png"
                 alt="Our Future"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
