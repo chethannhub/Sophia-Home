@@ -29,6 +29,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
+          <a href="/getstarted"></a>
           Get Started
         </motion.button>
       </div>

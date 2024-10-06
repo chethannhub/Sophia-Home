@@ -49,7 +49,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Beginning.png"
+                src="src\assets\Beginning1.png"
                 alt="Our Journey"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -77,7 +77,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Growth.png"
+                src="src\assets\Growth1.png"
                 alt="Our Growth"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -104,7 +104,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Future.png"
+                src="src\assets\Future1.png"
                 alt="Our Future"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />

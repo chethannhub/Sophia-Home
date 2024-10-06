@@ -57,12 +57,12 @@ const Footer = () => {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
-          <p>Email: support@newsteller.com</p>
-          <p>Phone: +123-456-7890</p>
+          <p>Email: support@sophia.com</p>
+          {/* <p>Phone: +123-456-7890</p> */}
         </motion.div>
       </div>
       <div className="text-center mt-8 text-sm text-gray-500">
-        © 2024 NewsTeller. All rights reserved.
+        <p>© 2024 Sophia. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -3,6 +3,8 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { FaHome, FaInfoCircle, FaSignInAlt, FaRocket, FaBars, FaTimes, FaUser } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -29,10 +31,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gradient-to-r from-blue-900  via-gray-800 to-black">
-        <div className="container mx-auto flex justify-between items-center p-4">
+      {/* <nav className="bg-gradient-to-r from-blue-900  via-gray-800 to-black"> */}
+      <nav className="sticky bg-gradient-to-r from-black via-gray-800 to-blue-900 ">
+        <div className="sticky container mx-auto flex justify-between items-center p-4">
           <NavLink to="/">
-            <div className="text-white font-bold text-2xl cursor-pointer">NewsTeller</div>
+            <div className="logo text-white font-bold text-2xl cursor-pointer"><img className='w-28' src="src\assets\Logo2.svg" alt="" /></div>
           </NavLink>
 
           <div className="lg:hidden">
@@ -59,6 +62,7 @@ const Navbar = () => {
             {/* <NavLink to="/signin" className="hover:text-purple-400 transition">
               <FaSignInAlt className="inline mr-2" /> Signin
             </NavLink> */}
+
             <NavLink className='cursor-pointer ' to='/getstarted'>
               <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-600 '>Get Started</button>
             </NavLink>

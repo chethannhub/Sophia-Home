@@ -1,20 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHeadphones, FaUserFriends, FaMusic, FaNewspaper, FaFileAlt, FaRobot } from 'react-icons/fa';
-import Article from '../assets/Articlepng';
+import Article from '../assets/Article1.png';
 import Audio from '../assets/Audio.png';
 import Podcast from '../assets/Podcast.png';
-import Music from '../assets/Music.png';
+import Music from '../assets/Music1.png';
 import SummaryImage from '../assets/Summary.png'; 
-import ChatAIImage from '../assets/image.png'; 
+import ChatAIImage from '../assets/ChatAI.png'; 
 
 const FeaturesPage = () => {
   const features = [
     {
-      icon: <FaNewspaper className="text-blue-400 text-4xl" />,
+      icon: <FaNewspaper className="text-purple-400 text-4xl" />,
       title: 'Curated Top Articles',
       description: 'We sift through thousands of sources daily to bring you the most relevant articles, tailored to your interests.',
       image: Article,
+    },
+    {
+      icon: <FaFileAlt className="text-blue-400 text-4xl" />,
+      title: 'Summary at a Glance',
+      description: 'Get concise, digestible summaries of the articles, allowing you to quickly grasp the key takeaways without reading the entire piece.',
+      image: SummaryImage,
     },
     {
       icon: <FaHeadphones className="text-teal-400 text-4xl" />,
@@ -23,28 +29,22 @@ const FeaturesPage = () => {
       image: Audio,
     },
     {
-      icon: <FaUserFriends className="text-purple-400 text-4xl" />,
+      icon: <FaUserFriends className="text-sky-500 text-4xl" />,
       title: 'Engage with Persona Conversations',
       description: 'Gain unique insights as AI-generated personas, like industry leaders and experts from their perspectives.',
       image: Podcast,
     },
     {
-      icon: <FaMusic className="text-pink-400 text-4xl" />,
-      title: 'Personalize Your Audio Experience',
-      description: 'Tailor your journey by selecting personas and topics that resonate with you for a truly customized experience.',
-      image: Music,
-    },
-    {
-      icon: <FaFileAlt className="text-yellow-400 text-4xl" />,
-      title: 'Summary at a Glance',
-      description: 'Get concise, digestible summaries of the articles, allowing you to quickly grasp the key takeaways without reading the entire piece.',
-      image: SummaryImage,
-    },
-    {
-      icon: <FaRobot className="text-green-400 text-4xl" />,
+      icon: <FaRobot className="text-pink-400 text-4xl" />,
       title: 'Chat with AI about this Article',
       description: 'Engage in dynamic, AI-driven conversations about the content, clarify doubts, and dive deeper into the topics.',
       image: ChatAIImage,
+    },
+    {
+      icon: <FaMusic className="text-cyan-400 text-4xl" />,
+      title: 'Personalize Your Audio Experience',
+      description: 'Tailor your journey by selecting personas and topics that resonate with you for a truly customized experience.',
+      image: Music,
     },
   ];
 

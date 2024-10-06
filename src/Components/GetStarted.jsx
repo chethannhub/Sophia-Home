@@ -41,7 +41,7 @@ const SignUp = () => {
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold mb-2">Join NewsTeller</h2>
+          <h2 className="text-3xl font-bold mb-2">Join Sophia</h2>
           <p className="text-gray-600">Create your account</p>
         </div>
 
