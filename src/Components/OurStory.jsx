@@ -1,8 +1,20 @@
 import React from "react";
-import { FaRocket, FaUsers, FaLightbulb } from "react-icons/fa"; 
-import { motion } from "framer-motion"; 
+import { FaRocket, FaUsers, FaLightbulb } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
+
+
+import Beginnig from '../assets/Beginning.png';
+import Growth from '../assets/Growth.png';
+import Future from '../assets/Future.png';
 
 const OurStory = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/getstarted');
+  };
+
   return (
     <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white py-8 px-4">
       <div className="max-w-7xl mx-auto">
@@ -49,7 +61,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Beginning.png"
+                src={Beginnig}
                 alt="Our Journey"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -77,7 +89,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Growth.png"
+                src={Growth}
                 alt="Our Growth"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -104,7 +116,7 @@ const OurStory = () => {
           >
             <div className="flex-1">
               <img
-                src="src\assets\Future.png"
+                src={Future}
                 alt="Our Future"
                 className="rounded-lg shadow-lg mt-4 w-full h-52 object-cover"
               />
@@ -139,7 +151,10 @@ const OurStory = () => {
             effortless, where your time is optimized, and where opportunities
             for investors are abundant.
           </p>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition"
+            onClick={handleButtonClick}
+
+          >
             Get Started
           </button>
         </motion.div>

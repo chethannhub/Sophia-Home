@@ -1,14 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHeadphones, FaUserFriends, FaMusic, FaNewspaper, FaFileAlt, FaRobot } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import Article from '../assets/Article.png';
 import Audio from '../assets/Audio.png';
 import Podcast from '../assets/Podcast.png';
 import Music from '../assets/Music.png';
-import SummaryImage from '../assets/Summary.png'; 
-import ChatAIImage from '../assets/ChatAI.png'; 
+import SummaryImage from '../assets/Summary.png';
+import ChatAIImage from '../assets/ChatAI.png';
 
 const FeaturesPage = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/getstarted');
+  };
+
   const features = [
     {
       icon: <FaNewspaper className="text-purple-400 text-4xl" />,
@@ -126,7 +133,10 @@ const FeaturesPage = () => {
         >
           Explore curated content and engage with AI-driven insights for a richer, more meaningful learning experience.
         </p>
-        <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition font-inter">
+        <button
+          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition font-inter"
+          onClick={handleButtonClick}
+        >
           Get Started
         </button>
       </motion.div>

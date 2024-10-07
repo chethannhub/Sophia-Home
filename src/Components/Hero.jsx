@@ -1,7 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/getstarted');
+  };
+
   return (
     <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white h-[540px] flex items-center">
       <div className="max-w-2xl mx-auto text-center p-2">
@@ -28,8 +36,8 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
+          onClick={handleButtonClick}
         >
-          <a href="/getstarted"></a>
           Get Started
         </motion.button>
       </div>
