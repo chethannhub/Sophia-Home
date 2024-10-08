@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRocket, FaUsers, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 
 import Beginnig from '../assets/Beginning.png';
@@ -9,11 +9,11 @@ import Growth from '../assets/Growth.png';
 import Future from '../assets/Future.png';
 
 const OurStory = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    navigate('/getstarted');
-  };
+  // const handleButtonClick = () => {
+  //   window.location.href = 'https://sophia-wheat.vercel.app/';
+  // };
 
   return (
     <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white py-8 px-4">
@@ -151,12 +151,15 @@ const OurStory = () => {
             effortless, where your time is optimized, and where opportunities
             for investors are abundant.
           </p>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition"
-            onClick={handleButtonClick}
 
-          >
-            Get Started
-          </button>
+          <a href="https://sophia-wheat.vercel.app/" target="_self" rel="noopener noreferrer">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition"
+            // onClick={handleButtonClick}
+            >
+              Get Started
+            </button>
+          </a>
+
         </motion.div>
       </div>
     </div>

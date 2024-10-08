@@ -74,7 +74,7 @@ const Navbar = () => {
               <FaSignInAlt className="inline mr-2" /> Signin
             </NavLink> */}
 
-            <NavLink className='cursor-pointer ' to='/getstarted'>
+            <NavLink className='cursor-pointer ' to='https://sophia-wheat.vercel.app/'>
               <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-600 '>Get Started</button>
             </NavLink>
           </ul>
@@ -107,7 +107,7 @@ const Navbar = () => {
             {/* <NavLink to="/signin" onClick={toggleMenu} className="hover:text-purple-400 transition">
               <FaSignInAlt className="inline mr-2" /> Signin
             </NavLink> */}
-            <NavLink className='inline cursor-pointer transition' to='/getstarted' onClick={toggleMenu} >
+            <NavLink className='inline cursor-pointer transition' to='https://sophia-wheat.vercel.app/' onClick={toggleMenu} >
               <button className='px-6 py-2 rounded-3xl bg-[#2137FC] hover:bg-blue-700'>Get Started</button>
             </NavLink>
           </ul>

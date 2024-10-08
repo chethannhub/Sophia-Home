@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 
 const Hero = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    navigate('/getstarted');
-  };
+  // const handleButtonClick = () => {
+  //   window.location.href = 'https://sophia-wheat.vercel.app/';
+  // };
 
   return (
     <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white h-[540px] flex items-center">
@@ -31,15 +31,19 @@ const Hero = () => {
         >
           Stay ahead with our daily selection of top articles and engaging audio insights from AI personas tailored for busy professionals.
         </motion.p>
-        <motion.button
-          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          onClick={handleButtonClick}
-        >
-          Get Started
-        </motion.button>
+
+        <a href="https://sophia-wheat.vercel.app/" target="_self" rel="noopener noreferrer">
+          <motion.button
+            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full font-medium hover:from-blue-400 hover:to-purple-400 transition"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          // onClick={handleButtonClick}
+          >
+            Get Started
+          </motion.button>
+        </a>
+
       </div>
     </section>
   );
