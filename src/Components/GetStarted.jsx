@@ -7,19 +7,16 @@ const SignUp = () => {
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  // Function to validate email
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  // Handle form submission
   const handleSignUp = (e) => {
     e.preventDefault();
-    setError(''); // Reset error message
+    setError(''); 
     setSuccessMessage('');
 
-    // Check if email and passwords are valid
     if (!validateEmail(email)) {
       setError('Please enter a valid email address.');
       return;
@@ -33,7 +30,6 @@ const SignUp = () => {
       return;
     }
 
-    // Simulating a sign-up process
     setSuccessMessage('Account created successfully!');
   };
 
@@ -45,7 +41,6 @@ const SignUp = () => {
           <p className="text-gray-600">Create your account</p>
         </div>
 
-        {/* Sign Up Buttons */}
         <div className="space-y-4">
           <button className="w-full flex items-center justify-center border border-gray-300 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
             <img
@@ -75,7 +70,6 @@ const SignUp = () => {
           </button>
         </div>
 
-        {/* Divider */}
         <div className="flex items-center justify-center mt-6 mb-6">
           <hr className="w-full border-gray-300" />
           <span className="mx-3 text-gray-500">OR</span>
@@ -96,7 +90,6 @@ const SignUp = () => {
           </div>
         )}
 
-        {/* Sign Up Form */}
         <form onSubmit={handleSignUp} className="space-y-4">
           <input
             type="email"
@@ -127,7 +120,6 @@ const SignUp = () => {
           </button>
         </form>
 
-        {/* Links */}
         <div className="text-center mt-4 text-sm text-gray-500">
           <p>
             Already have an account?{' '}
@@ -137,7 +129,6 @@ const SignUp = () => {
           </p>
         </div>
 
-        {/* Footer Note */}
         <div className="text-xs text-gray-400 text-center mt-4">
           Click "Sign Up" to agree to NewsTeller’s{' '}
           <a href="#" className="text-blue-600 hover:underline">

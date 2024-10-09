@@ -6,6 +6,7 @@ import Features from './Components/Features';
 import Membership from './Components/Membership';
 import Signin from './Components/Signin';
 import GetStarted from './Components/GetStarted';
+import Feedback_form from './Components/Feedback_form';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/membership' element={<Membership />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/getstarted' element={<GetStarted />} />
+        <Route path='/feedback' element={<Feedback_form/>} />
       </Routes>
       
       <Footer />

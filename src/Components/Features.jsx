@@ -83,11 +83,11 @@ const FeaturesPage = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="flex flex-col h-full items-center bg-gray-800 p-8 rounded-lg shadow-lg text-center transition-transform duration-300 transform hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
+            className="flex flex-col h-full items-center border-[1px] border-gray-700 bg-gray-800 p-8 cursor-pointer rounded-xl shadow-xl text-center transition-transform duration-300 transform hover:scale-110 hover:bg-[#232f3f] hover:shadow-2xl"
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.7, delay: index * 0.1 }}
           >
             <div className="flex-grow mb-6 flex flex-col items-center">
               <div className="mb-4">{feature.icon}</div>

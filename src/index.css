@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+    background: linear-gradient(180deg, #2c3544, #1a1e24, #3b4b6e);
+}
+
+
+
 .logo {
     font-family: "Montserrat", sans-serif;
 }
