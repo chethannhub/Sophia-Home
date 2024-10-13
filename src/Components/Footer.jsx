@@ -27,7 +27,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><a href="/feedback" className="hover:text-purple-400 transition">Feedback</a></li>
             <li><a href="/" className="hover:text-purple-400 transition">Home</a></li>
-            <li><a href="/ourstory" className="hover:text-purple-400 transition">Our Story</a></li>       
+            <li><a href="/ourstory" className="hover:text-purple-400 transition">Our Story</a></li>
           </ul>
         </motion.div>
 
@@ -40,7 +40,9 @@ const Footer = () => {
           <div className="flex gap-6">
             <FaFacebook className="hover:text-blue-500 transition" />
             <FaTwitter className="hover:text-blue-400 transition" />
-            <FaLinkedin className="hover:text-blue-600 transition" />
+            <a href=" https://www.linkedin.com/company/connecwithsophia/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="hover:text-blue-600 transition" />
+            </a>
           </div>
         </motion.div>
 

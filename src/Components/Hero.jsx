@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white h-[540px] flex items-center">
 
-<motion.div
+      <motion.div
         className="absolute top-10 left-10 w-16 h-16 bg-blue-500 rounded-full"
         variants={floatingVariants}
         initial="initial"
