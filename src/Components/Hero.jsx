@@ -30,6 +30,7 @@ const Hero = () => {
         variants={floatingVariants}
         initial="initial"
         animate="animate"
+        aria-hidden="true"
       />
       <motion.div
         className="absolute top-20 right-20 w-10 h-10 bg-purple-500 rounded-full"
@@ -37,6 +38,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
         style={{ animationDelay: '1s' }}
+        aria-hidden="true"
       />
       <motion.div
         className="absolute bottom-10 left-20 w-12 h-12 bg-blue-300 rounded-full"
@@ -44,6 +46,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
         style={{ animationDelay: '2s' }}
+        aria-hidden="true"
       />
 
       <div className="max-w-2xl mx-auto text-center p-2">

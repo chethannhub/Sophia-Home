@@ -10,22 +10,27 @@ import Feedback_form from './Components/Feedback_form';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { HelmetProvider } from "react-helmet-async";
+
+
 function App() {
   return (
-    <Router>
-      <Navbar />
-      
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/ourstory' element={<OurStory />} />
-        <Route path='/membership' element={<Membership />} />
-        <Route path='/signin' element={<Signin />} />
-        <Route path='/getstarted' element={<GetStarted />} />
-        <Route path='/feedback' element={<Feedback_form/>} />
-      </Routes>
-      
-      <Footer />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Navbar />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/ourstory' element={<OurStory />} />
+          <Route path='/membership' element={<Membership />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/getstarted' element={<GetStarted />} />
+          <Route path='/feedback' element={<Feedback_form />} />
+        </Routes>
+
+        <Footer />
+      </Router>
+    </HelmetProvider>
   );
 }
 
